@@ -1,0 +1,42 @@
+:root {
+    --primary-color: #aa3022;
+    --secondary-color: #4d3634;
+}
+
+button {
+    position: relative;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 1px var(--primary-color) solid;
+    font-size:14px;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    overflow: hidden;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+button .circle {
+    position: absolute;
+    background-color: #fff;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5 ease-out;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/helpers/nav.css">
+    <link rel="stylesheet" href="../css/helpers/button.css">
+    <link rel="stylesheet" href="../css/sections/groups.css">
+    <title>Food Groups</title>
+</head>
+<body>
+    <!-- nav section  -->
+    <nav class="nav">
+        <div class="container">
+            <h1 class="logo">
+                <a href="/">Amescom</a>
+            </h1>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="foods.html">Foods</a></li>
+                <li><a href="#" class="current">Food Group</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- sub nav section /create group form -->
+    <div class="sub-nav">
+        <form action="POST" id="form">
+            <input class="add" id="add" placeholder="add food group">
+        </form>
+    </div>
+
+    <!-- groups section -->
+    <main id="main">
+        <div class="group">
+            <div class="group-info">
+                <h3>Food Group Title</h3>
+                <span class="group-id">01011</span>
+                <div class="overview">
+                    <button class="delete-btn" id="delete-btn">Delete group</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="group-info">
+                <h3>Food Group Title</h3>
+                <span class="group-id">01011</span>
+                <div class="overview">
+                    <button class="delete-btn" id="delete-btn">Delete group</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- implementing js files -->
+    <script src="../js/nav/nav.js"></script>
+    <script src="../js/groups/read.js"></script>
+    <script src="../js/groups/create.js"></script>
+    <script src="../js/groups/delete.js"></script>
+
+</body>
+    
+</html>

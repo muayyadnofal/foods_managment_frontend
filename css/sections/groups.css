@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
+:root {
+    --primary-color: #aa3022;
+    --secondary-color: #4d3634;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  color: #222;
+  margin-bottom: 200px; 
+}
+
+.sub-nav {
+    position: fixed;
+    background-color: var(--secondary-color);
+    top: 72px;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    padding: 0.5rem 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.sub-nav.active {
+    top: 53px; 
+}
+
+.add {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.2rem 0.6rem;
+}
+
+.add::placeholder {
+    color: #fff;
+}
+
+.add:focus {
+    outline: none;
+    background-color: var(--primary-color);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.group {
+    width: 300px;
+    top: 130px;
+    margin: 1rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.group-info {
+    color: #eee;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column; 
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.group-info {
+    margin-top: 0;
+}
+
+.group-info span {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.group-info h3 {
+    font-size: 12px;
+}
+
+.overview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 0.2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.group:hover .overview {
+    transform: translateY(0);
+}

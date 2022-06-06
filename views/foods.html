@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/sections/foods.css">
+    <link rel="stylesheet" href="../css/helpers/nav.css">
+    <link rel="stylesheet" href="../css/helpers/button.css">
+    <link rel="stylesheet" href="../css/helpers/nuts.css">
+    <link rel="stylesheet" href="../css/helpers/chechbox.css">
+    <title>Food</title>
+</head>
+<body>
+    <!-- nav section  -->
+    <nav class="nav">
+        <div class="container">
+            <h1 class="logo">
+                <a href="/">Amescom</a>
+            </h1>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#" class="current">Foods</a></li>
+                <li><a href="foodGroups.html">Food Group</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- sub nav section -->
+    <div class="sub-nav">
+        <!-- page transport buttons section -->
+        <div class="btns">
+            <div class="move">
+                <button class="btn prev"> < </button>
+                <button class="btn next"> > </button>    
+            </div>
+        </div>
+
+        <div class="left-side">
+            <!-- sort toggle container section -->
+            <div class="toggle-container">
+                <input type="checkbox" id="sort" class="sort">
+                <label for="sort" class="label">
+                    <div class="ball"></div>
+                </label>
+                <span>Sort</span>
+            </div>
+    
+            <!-- search form section -->
+            <form id="form">
+                <input class="text search" id="search" placeholder="search by name">
+            </form>
+        </div>
+    </div>
+
+    <!-- foods container section -->
+    <main id="main"></main>
+
+    <!-- popup nut info section -->
+    <div class="nut-info" id="nut-info">
+        <div class="nut-header">
+            <div class="title">Food Information</div>
+            <button class="close-button">&times;</button>
+        </div>
+        <div class="nut-body">
+            <h4>Carbohydrate, by difference: </h4>
+            <h4>Energy: </h4>
+            <h4>Caffeine: </h4>
+            <h4>Theobromine: </h4>
+            <h4>Sugar, total: </h4>
+        </div>
+    </div>
+
+    <!-- overly for the page when opening the popup -->
+    <div id="overlay"></div>
+
+    <!-- implementing js files -->
+    <script src="../js/foods/read-info.js"></script>
+    <script src="../js/foods/search.js"></script>
+    <script src="../js/foods/sortAndPaginate.js"></script>
+    <script src="../js/foods/read.js"></script>
+    <script src="../js/nav/nav.js"></script>
+
+</body>
+    
+</html>
